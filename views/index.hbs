@@ -1,0 +1,80 @@
+
+   <h1>Welcome to {{title}}</h1> 
+
+  <h2>{{ para }}</h2>
+<div class="div"><form action="/submit" method="POST">
+  <label for="todo">To Do Work</label><br>
+  <input type="text" placeholder="Enter your work to do" name="todo"><br>
+  <button  style="background-color: lightgreen;" type="submit">Add in my TO-DO's</button><br>
+</form></div>
+
+
+<div class="container">{{# each items}}
+ <div class="listitems"> 
+   <ul><li><h3>To-Do: {{this.todo}}</h3></li>
+   <li><h3>Date: {{this.date}}</h3></li>
+   <form action="/delete" method="post">
+   <input type="hidden" value="{{this.id}}" name="Id" >
+   <button class="btn-btn" type="submit">Delete</button>
+   </form>
+   <span><a href="/update/{{this.id}}"><button>Update</button></a></span>
+   </ul>
+ </div>
+{{/each}}</div>
+
+<style>
+html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  text-align: center;
+  
+}
+
+ label {
+   position: absolute;
+   left: 29em;
+ }
+ ::placeholder{
+   color: white;
+ }
+input {
+  height: 2em;
+  width: 30%;
+  margin: 1em;
+  padding: .5em;
+  background-color: aqua;
+  color: white;
+  border-radius: 10px;
+}
+div.listitems {
+  background-color: aqua;
+  width: 60%;
+  padding: .2em;
+  margin: 1em;
+  border-radius: 10px;
+}
+.btn-btn {
+  position:-webkit-sticky;
+  right: 25em;;
+  background-color: red;
+}
+
+button {
+  padding: .5em;
+  border-radius: 7px;
+  cursor: pointer;
+}
+div.listitems ul {
+  text-align: start;
+  list-style-type: none;
+}
+p {
+  font-size: larger;
+}
+.container {
+  text-align: -webkit-center;
+
+}
+</style>

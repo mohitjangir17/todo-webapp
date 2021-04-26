@@ -1,0 +1,60 @@
+<div id="updateform">
+<form action="/update/updating" method="post">
+<input hidden type="text" value="{{id}}" name="id"><br>
+<label for="todo">Todo Work</label><br>
+<input type="text" name="todo" required><br>
+<button type="submit">Update</button><br>
+</form>
+</div>
+
+<style>
+    html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  text-align: center;
+  
+}
+#updateform {
+  display: block;
+  background-color: blue;
+  vertical-align: -webkit-baseline-middle;
+}
+input {
+  height: 2em;
+  width: 30%;
+  margin: 1em;
+  padding: .5em;
+  background-color: aqua;
+  color: white;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+div .updateform {
+  background-color: aqua;
+  width: 60%;
+  padding: .2em;
+  margin: 1em;
+  border-radius: 10px;
+  text-align: center;
+}
+.btn-btn {
+  position:-webkit-sticky;
+  right: 25em;;
+  background-color: red;
+}
+
+button {
+  padding: .5em;
+  border-radius: 7px;
+  cursor: pointer;
+}
+p {
+  font-size: larger;
+}
+.container {
+  text-align: -webkit-center;
+
+}
+</style>
